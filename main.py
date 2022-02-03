@@ -17,21 +17,6 @@ async def hi():
     return {message}
 
 
-@app.get("/getall")
-async def get_all_rows():
-    return serializetoList(conn.local.user.find())
-
-
-@app.get("/consumer")
-async def get_all_rows():
-    return serializetoList(consumer_queue)
-
-
-# @app.get("/{id}")
-# async def get_row_by_id(id):
-#     return serializetoDict(conn.local.user.find_one({"_id": ObjectId(id)}))
-
-
 async def consume_queue(payload):
     objId = payload["unique_identifier"]
     await asyncio.sleep(10)
@@ -75,7 +60,3 @@ async def answer(id: str, response: Response):
         # Not found make status 404
         response.status_code = status.HTTP_404_NOT_FOUND
 
-
-@app.delete("/{id}")
-async def delete_row(id):
-    return serializetoDict(conn.local.user.find_one_and_delete({"_id": ObjectId(id)}))
