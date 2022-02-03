@@ -8,8 +8,7 @@ from collections import deque
 
 
 app = FastAPI()
-consumer_queue = deque()  # Lets pretend queue
-
+consumer_queue = deque()  
 
 @app.get("/")
 async def hi():
