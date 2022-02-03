@@ -33,7 +33,7 @@ Routes -
 
         Return: The unique identifier for the request (the document id of the entry stored in database)
 
-3. Take one url parameter id 
+3. Takes one url parameter id 
 
         Route: /get_answer/identifier/
 
