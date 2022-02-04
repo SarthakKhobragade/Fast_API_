@@ -8,6 +8,6 @@ class Info(BaseModel):
 
 
 class Payload(BaseModel):
-    number1: int
-    number2: int
+    number_1: int
+    number_2: int
     unique_identifier: str
