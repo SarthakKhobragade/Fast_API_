@@ -27,7 +27,7 @@ Routes -
 
         ex - /calculate/number1/number2?number1=6&number2=6
 
-        payload ex - { "number1": 5, "number2": 2, "unique_identifier": "61fbd7e718ae62ae70879fd7"}
+        payload ex - { "number_1": 5, "number_2": 2, "unique_identifier": "61fbd7e718ae62ae70879fd7"}
 
         Methods: GET
 
