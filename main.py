@@ -21,7 +21,7 @@ async def consume_queue(payload):
     await asyncio.sleep(10)
     # Find the object and update if found
     conn.local.user.find_one_and_update({"_id": ObjectId(objId)}, {
-        "$set": dict(Info(number1=payload["number1"], number2=payload["number2"], answer=payload["number1"] + payload["number2"]))
+        "$set": dict(Info(number1=payload["number_1"], number2=payload["number_2"], answer=payload["number_1"] + payload["number_2"]))
     })
     # Remove from queue when processed
     consumer_queue.popleft()
